@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/id_loc"
+        android:title="Location"
+        android:icon="@drawable/locblue"/>
+    <item
+        android:id="@+id/id_vent"
+        android:title="Vente"
+        android:icon="@drawable/vente"/>
+    <!--<item
+        android:id="@+id/id_aut"
+        android:title="Autres"
+        android:icon="@drawable/autre"/> -->
+</menu>

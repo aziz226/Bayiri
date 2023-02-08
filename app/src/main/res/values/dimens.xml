@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margLeft">10dp</dimen>
+    <dimen name="margRight">10dp</dimen>
+    <dimen name="marTop">10dp</dimen>
+</resources>

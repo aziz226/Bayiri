@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "933187931262",
+    "project_id": "bayiri-2023",
+    "storage_bucket": "bayiri-2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933187931262:android:6786eb0b6fc90e2f5e1c2f",
+        "android_client_info": {
+          "package_name": "com.pp.bayiri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "933187931262-56rfsvqg2dr0upr24b2qeta2no9lfe4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNjAeBxgyxbJ3AdUwmPAahi-pKaDGtHbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933187931262-56rfsvqg2dr0upr24b2qeta2no9lfe4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

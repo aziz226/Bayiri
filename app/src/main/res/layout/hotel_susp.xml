@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Suspend.HotelSusp">
+
+    <RelativeLayout
+        android:id="@+id/layt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margLeft"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="@dimen/margRight"
+        android:orientation="horizontal"
+        android:background="#CCCCCC"
+        android:padding="3dp"
+        >
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Les hotels suspendues "
+            android:layout_marginLeft="@dimen/margLeft"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/hot_susp_rech"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:queryHint="Rechercher une hotel ici..."
+        android:background="@drawable/search_design"
+        android:layout_below="@id/layt"
+        app:iconifiedByDefault="false"
+        android:layout_marginLeft="@dimen/margLeft"
+        android:layout_marginRight="@dimen/margRight"
+        android:layout_marginTop="10dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hos_mais_recycl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/hot_susp_rech"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        />
+
+</RelativeLayout>

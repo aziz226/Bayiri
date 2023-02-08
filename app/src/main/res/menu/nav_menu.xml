@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item android:title="Mon compte">
+            <menu>
+                <item
+                    android:id="@+id/id_prop"
+                    android:title="Je suis propriétaire"/>
+                <item
+                    android:id="@+id/id_mes_loc"
+                    android:title="Mes Locations"/>
+                <item
+                    android:id="@+id/id_mes_re"
+                    android:title="Mes reservation"/>
+            </menu>
+        </item>
+    <item android:title="Autres">
+        <menu>
+
+        </menu>
+    </item>
+
+</menu>
