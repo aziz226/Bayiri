@@ -4,14 +4,18 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -41,7 +45,8 @@ import com.pp.bayiri.R;
 public class SignIn extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 100;
-    private TextInputEditText signEmail, email, pass;
+    private TextInputEditText signEmail;
+    private EditText email, pass;
     private LinearLayout compteGoog;
     private GoogleSignInOptions gso;
     private GoogleSignInClient gsc;
@@ -50,6 +55,7 @@ public class SignIn extends AppCompatActivity {
     private String em, pa, userId;
     private DatabaseReference ref;
     private TextView politiq;
+    private VideoView videoView;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -72,6 +78,15 @@ public class SignIn extends AppCompatActivity {
 
         email= findViewById(R.id.con_email);
         pass= findViewById(R.id.con_pass);
+
+        videoView=findViewById(R.id.videoview);
+        Uri uri= Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.bac);
+        videoView.setVideoURI(uri);
+        videoView.start();
+
+        videoView.setOnPreparedListener(mp -> {
+            mp.setLooping(true);
+        });
 
         btnCn.setOnClickListener(view -> {
             if (TextUtils.isEmpty(""+email.getText().toString().trim())){
@@ -144,9 +159,6 @@ public class SignIn extends AppCompatActivity {
 
     }
 
-
-
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -213,5 +225,29 @@ public class SignIn extends AppCompatActivity {
         });
 
         dialog.show();
+    }
+
+    @Override
+    protected void onResume() {
+        videoView.resume();
+        super.onResume();
+    }
+
+    @Override
+    protected void onRestart() {
+        videoView.start();
+        super.onRestart();
+    }
+
+    @Override
+    protected void onPause() {
+        videoView.suspend();
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        videoView.stopPlayback();
+        super.onDestroy();
     }
 }

@@ -1,159 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".identification.SignIn">
 
-    <RelativeLayout
+    <VideoView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/videoview"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9F0E0E0E"
+        >
 
-        <ImageView
-            android:id="@+id/app_log"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/icone"
-            />
+            android:layout_height="match_parent">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/app_log"
-            android:layout_marginLeft="@dimen/margLeft"
-            android:layout_marginRight="@dimen/margRight"
-            android:layout_marginTop="20dp"
-            android:hint="Email"
-            android:id="@+id/i1"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
+            <!--<ImageView
+                android:id="@+id/app_log"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/icone"
+                /> -->
+            
+            <EditText
                 android:id="@+id/con_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margLeft"
+                android:layout_marginRight="@dimen/margLeft"
+                android:hint="Email"
+                android:layout_marginTop="250dp"
+                android:background="@drawable/edit_text1"
+                android:textColor="@color/black"
                 android:inputType="textEmailAddress"
-                />
+                android:padding="15dp"/>
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margLeft"
-            android:layout_marginRight="@dimen/margRight"
-            android:layout_marginTop="10dp"
-            android:hint="Mot de passe"
-            android:layout_below="@+id/i1"
-            android:id="@+id/i2"
-            app:passwordToggleEnabled="true"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:id="@+id/con_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margLeft"
+                android:layout_marginRight="@dimen/margLeft"
+                android:hint="Mot de passe"
+                android:background="@drawable/edit_text1"
+                android:textColor="@color/black"
+                android:layout_below="@id/con_email"
                 android:inputType="textPassword"
+
+                android:layout_marginTop="20dp"
+                android:layout_centerVertical="true"
+                android:padding="15dp"/>
+
+            <!--
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_log"
+                android:layout_marginLeft="@dimen/margLeft"
+                android:layout_marginRight="@dimen/margRight"
+                android:layout_marginTop="20dp"
+                app:boxStrokeColor="@color/blue"
+                android:background="@color/white"
+                android:hint="Email"
+                android:id="@+id/i1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/con_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/blue"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margLeft"
+                android:layout_marginRight="@dimen/margRight"
+                android:layout_marginTop="10dp"
+                android:hint="Mot de passe"
+                android:layout_below="@+id/con_email"
+                app:boxStrokeColor="@color/blue"
+                android:id="@+id/i2"
+                app:passwordToggleEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/con_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/blue"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            -->
+
+            <Button
+                android:id="@+id/btn_con"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connexion"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="220dp"
+                android:layout_marginRight="@dimen/margRight"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/con_pass"
+                android:backgroundTint="#E8FFFFFF"
                 />
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/btn_con"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Connexion"
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            android:padding="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="@dimen/margRight"
-            android:layout_marginRight="@dimen/margRight"
-            android:layout_marginTop="30dp"
-            android:layout_below="@+id/i2"
-            />
-
-        <TextView
-            android:id="@+id/id_ou"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ou"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/marTop"
-            android:layout_below="@+id/btn_con"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            />
-        <LinearLayout
-            android:id="@+id/id_ll"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:background="@drawable/layout_design"
-            android:layout_marginLeft="@dimen/margLeft"
-            android:layout_marginRight="@dimen/margRight"
-            android:layout_below="@id/id_ou"
-            android:layout_marginTop="@dimen/marTop"
-            >
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:src="@drawable/google"/>
             <TextView
+                android:id="@+id/id_ou"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Choisir un compte Google"
-                android:layout_gravity="center"
-                android:textColor="@color/black"
+                android:text="Ou"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/marTop"
+                android:layout_below="@+id/btn_con"
                 android:textStyle="bold"
-                android:textSize="19sp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                />
+            <LinearLayout
+                android:id="@+id/id_ll"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_text1"
+                android:layout_marginLeft="@dimen/margLeft"
+                android:layout_marginRight="@dimen/margRight"
+                android:layout_below="@id/id_ou"
+
+                android:layout_marginTop="@dimen/marTop"
+                >
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:src="@drawable/google"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Se connecter avec Google"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/signU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_ll"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Créer un nouveau compte"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:onClick="SignUp"/>
+
+            <TextView
+                android:id="@+id/termCond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms &amp; conditions"
+                android:layout_below="@+id/signU"
+                android:layout_marginTop="100dp"
+                android:padding="6dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/blue"
                 />
 
-        </LinearLayout>
+            <View
+                android:layout_width="130dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/termCond"
+                android:background="@color/blue"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                />
 
-        <TextView
-            android:id="@+id/signU"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/id_ll"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Créer un nouveau compte"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="@color/blue"
-            android:layout_centerHorizontal="true"
-            android:onClick="SignUp"/>
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/termCond"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Terms &amp; conditions"
-            android:layout_below="@+id/signU"
-            android:layout_marginTop="100dp"
-            android:padding="6dp"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/red"
-            />
-
-        <View
-            android:layout_width="130dp"
-            android:layout_height="1dp"
-            android:layout_below="@+id/termCond"
-            android:background="@color/red"
-            android:layout_marginBottom="10dp"
-            android:layout_centerHorizontal="true"
-            />
-
-    </RelativeLayout>
-
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>
